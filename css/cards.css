@@ -1,0 +1,73 @@
+/*Individual Card Styles*/
+.card{ height: 95px; width: 66px; text-align: center; margin: 5px; float: left; border: 1px solid #000; font: 11px arial, sans-serif; -webkit-border-radius: 5px; -moz-border-radius: 5px; position: relative; background-color: #fff; }
+  .Spades, .Clubs{ color: #000; }
+  .Hearts, .Diamonds{ color: #c00; }
+
+  /*Card Corners*/
+  .tl{ display: block; position: absolute; top: 3px; left: 1px; line-height: .8em; z-index: 1; font-weight: bold; }
+  .br{ display: block; position: absolute; bottom: 3px; right: 1px; line-height: .8em; -webkit-transform: rotate(180deg); -moz-transform: rotate(180deg); z-index: 1; font-weight: bold; letter-spacing: -0.1em; }
+  .suit{ clear: both; display: block; font-size: 1.3em; line-height: .8em; }
+
+  /*Middle Area and Grid Positions*/
+  .mid{ border: 1px solid #fff; height: 72px; width: 43px; margin: 10px 0 0 10px; font-size: 20px; line-height: 1em; position: relative; }
+
+    /*Aces*/
+    .Ace-Spades .A{ margin: 23px auto 0; display: block; font-size: 48px; }
+    .A{ margin: 25px auto 0; display: block; }
+
+    /*2 - 10*/
+    .A1{ position: absolute; top: 0px; left: 1px; }
+    .B1{ position: absolute; top: 0px; left: 16px; }
+    .C1{ position: absolute; top: 0px; left: 32px; }
+
+    .A2{ position: absolute; top: 17px; left: 1px; }
+    .B2{ position: absolute; top: 10px; left: 16px; }
+    .C2{ position: absolute; top: 17px; left: 32px; }
+
+    .A3{ position: absolute; top: 25px; left: 1px; }
+    .B3{ position: absolute; top: 25px; left: 16px; }
+    .C3{ position: absolute; top: 25px; left: 32px; }
+
+    .A4{ position: absolute; top: 38px; left: 1px; -webkit-transform: rotate(180deg); -moz-transform: rotate(180deg); }
+    .B4{ position: absolute; top: 46px; left: 16px; -webkit-transform: rotate(180deg); -moz-transform: rotate(180deg); }
+    .C4{ position: absolute; top: 38px; left: 32px; -webkit-transform: rotate(180deg); -moz-transform: rotate(180deg); }
+
+    .A5{ position: absolute; top: 54px; left: 1px; -webkit-transform: rotate(180deg); -moz-transform: rotate(180deg); }
+    .B5{ position: absolute; top: 54px; left: 16px; -webkit-transform: rotate(180deg); -moz-transform: rotate(180deg); }
+    .C5{ position: absolute; top: 54px; left: 32px; -webkit-transform: rotate(180deg); -moz-transform: rotate(180deg); }
+
+    /*Face Cards*/
+    .Jack .mid, .Queen .mid, .King .mid{ border-color: #000; }
+    .F1{ position: absolute; top: -3px; left: 1px; }
+    .F2{ position: absolute; top: 55px; left: 32px; -webkit-transform: rotate(180deg); -moz-transform: rotate(180deg); }
+
+/*House Style*/
+.Jack-Clubs .mid{ background: transparent url(../img/house_sprite.jpg) 0px 0px no-repeat; }
+.Jack-Spades .mid{ background: transparent url(../img/house_sprite.jpg) -45px 0px no-repeat; }
+.Jack-Hearts .mid{ background: transparent url(../img/house_sprite.jpg) -90px 0px no-repeat; }
+.Jack-Diamonds .mid{ background: transparent url(../img/house_sprite.jpg) -135px 0px no-repeat; }
+
+.Queen-Clubs .mid{ background: transparent url(../img/house_sprite.jpg) 0px -74px no-repeat; }
+.Queen-Spades .mid{ background: transparent url(../img/house_sprite.jpg) -45px -74px no-repeat; }
+.Queen-Hearts .mid{ background: transparent url(../img/house_sprite.jpg) -90px -74px no-repeat; }
+.Queen-Diamonds .mid{ background: transparent url(../img/house_sprite.jpg) -135px -74px no-repeat; }
+
+.King-Clubs .mid{ background: transparent url(../img/house_sprite.jpg) 0px -148px no-repeat; }
+.King-Spades .mid{ background: transparent url(../img/house_sprite.jpg) -45px -148px no-repeat; }
+.King-Hearts .mid{ background: transparent url(../img/house_sprite.jpg) -90px -148px no-repeat; }
+.King-Diamonds .mid{ background: transparent url(../img/house_sprite.jpg) -135px -148px no-repeat; }
+
+/*The Back*/
+.back{}
+  .bmid{ height: 89px; margin: 3px 3px 0 3px; background-color: #c00; }
+
+/*Flipping*/
+.up .back{ display: none; }
+.down .front{display: none; }
+
+/*Cards on the Table*/
+.cards{ overflow: auto; margin: 20px 0; clear: both; }
+
+/*hand*/
+.hand{ position: relative; }
+  

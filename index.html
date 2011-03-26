@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Tommy's JS Lab => Cards</title> 
+    <meta charset="utf-8" />
+    <link rel="icon" href="img/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="css/cards.css" /> 
+    <link rel="stylesheet" href="css/page.css" /> 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
+    <script src="js/cards.js"></script> 
+    <script src="js/page.js"></script> 
+  </head>
+  <body>
+
+    <header>
+      <h1>Javascript &amp; CSS3 Deck of Cards</h1>
+      <p>The below isn't a functioning game, it is simply a demo of a deck of cards built with HTML using some CSS3 properties and one sprite image for the face cards.  It renders for IE as well sans the rounded corners and flipped symbols and characters. The deck functionality is handled on the client side with javascript (jQuery). Just do a view source to grab the JS class files and the cards.css file with the "house" styling rules.</p>
+    </header>
+
+    <nav id="deck_button_row">
+      <input type="button" id="shuffle" value="Shuffle Deck" />
+      <input type="button" id="dealCard" value="Deal A Card" />
+      <input type="button" id="gatherDiscards" value="Gather Discards" />
+      <input type="button" id="gather" value="Gather All" />
+    </nav>
+
+    <div id="felt">
+      <section id="handsArea"></section>
+      <section id="deckArea"></section>
+      <section id="discardArea"></section>
+    </div>
+    
+    <footer>
+      <small>
+        <p>Credit for the face card images goes to: <a href="http://www.jfitz.com/cards">www.jfitz.com/cards</a></p>
+        <p>The grid based layout for the cards builds on brilliant work from Mike Hall at <a href="http://www.brainjar.com/css/cards/">BrainJar.com</a></p>
+      </small>
+    </footer>
+
+  </body>
+</html>

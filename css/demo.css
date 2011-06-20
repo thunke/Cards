@@ -1,0 +1,109 @@
+/*reset, basic page*/
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, em, font, img, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tr, th, td{ margin: 0; padding: 0; font-weight: normal; font-size: 100%; }
+body{ font-family: Helvetica, arial, sans-serif; font-size: 12px; background-color: #222; }
+img{ display: block; border: none; }
+h2{ font-size: 22px; }
+p{ font-size: 14px; margin: 10px 0; }
+header, footer, section, nav{ display: block; }
+.clearing{ clear: both; }
+
+/*the card table*/
+#deck_button_row{ padding: 10px; background-color: #4A270B; display: block; width: 1300px; margin: 0 auto; }
+
+#felt{ background-color: #1F6E32; margin: 0 auto 20px; padding: 10px; clear: both; overflow: auto; height: 600px; width: 1300px; position: relative;
+	-moz-border-radius-topleft: 0px;
+	-moz-border-radius-topright: 0px;
+	-moz-border-radius-bottomright: 800px;
+	-moz-border-radius-bottomleft: 800px;
+	-webkit-border-radius: 0px 0px 800px 800px;
+	border-radius: 0px 0px 800px 800px;
+	-webkit-box-shadow: 5px 5px 5px 5px #111;
+	-moz-box-shadow: 5px 5px 5px 5px #111;
+	box-shadow: 5px 5px 5px 5px #111;
+}
+
+h1{ font: 80px 'Lobster', arial, serif; position: absolute; top: 180px; width: 1300px; text-align: center; color: #275c34; }
+#felt h2{ color: #fff; }
+#deckArea, #discardArea{ margin: 0 auto; clear: both; width: 590px; height: 150px; position: relative; }
+
+/*hand*/
+#handsArea{}
+.hand{ position: absolute; border: 3px solid #fff; width: 230px; float: left; padding: 5px; -webkit-border-radius: 10px; -moz-border-radius: 10px; }
+  .hand:nth-child(1){ top: 80px; left: 20px; -moz-transform: rotate(70deg); -webkit-transform: rotate(70deg); -ms-transform: rotate(70deg); transform: rotate(70deg); }
+  .hand:nth-child(2){ top: 330px; left: 215px; -moz-transform: rotate(36deg); -webkit-transform: rotate(36deg); -ms-transform: rotate(36deg); transform: rotate(36deg); }
+  .hand:nth-child(3){ top: 430px; left: 50%; margin-left: -120px; }
+  .hand:nth-child(4){ top: 330px; right: 215px; -moz-transform: rotate(-36deg); -webkit-transform: rotate(-36deg); -ms-transform: rotate(-36deg); transform: rotate(-36deg); }
+  .hand:nth-child(5){ top: 80px; right: 20px; -moz-transform: rotate(-70deg); -webkit-transform: rotate(-70deg); -ms-transform: rotate(-70deg); transform: rotate(-70deg); }
+
+  .cards-in-hand{ clear: both; overflow: auto; margin: 10px 0; min-height: 109px; position: relative; }
+  .cards-in-hand .card{ cursor: pointer; position: absolute; }
+  .cards-in-hand .card:nth-child(1){ z-index: 1; left: 0px; }
+  .cards-in-hand .card:nth-child(2){ z-index: 2; left: 15px; }
+  .cards-in-hand .card:nth-child(3){ z-index: 3; left: 30px; }
+  .cards-in-hand .card:nth-child(4){ z-index: 4; left: 45px; }
+  .cards-in-hand .card:nth-child(5){ z-index: 5; left: 60px; }
+  .cards-in-hand .card:nth-child(6){ z-index: 6; left: 75px; }
+  .cards-in-hand .card:nth-child(7){ z-index: 7; left: 90px; }
+  .cards-in-hand .card:nth-child(8){ z-index: 8; left: 105px; }
+  .cards-in-hand .card:nth-child(9){ z-index: 9; left: 120px; }
+  .cards-in-hand .card:nth-child(10){ z-index: 10; left: 135px; }
+  .cards-in-hand .card:nth-child(11){ z-index: 11; left: 150px; }
+  .cards-in-hand .card:nth-child(12){ z-index: 12; left: 165px; }
+    .cards-in-hand .selected{ border: 2px solid #00FF00; margin: 4px; top: -4px; }
+
+#deckArea .card, #discardArea .card{ position: absolute; left: 0; top: 0; }
+#deckArea .card:nth-child(1), #discardArea .card:nth-child(1){ z-index: 52; left: 0px; }
+#deckArea .card:nth-child(2), #discardArea .card:nth-child(2){ z-index: 51; left: 10px; }
+#deckArea .card:nth-child(3), #discardArea .card:nth-child(3){ z-index: 50; left: 20px; }
+#deckArea .card:nth-child(4), #discardArea .card:nth-child(4){ z-index: 49; left: 30px; }
+#deckArea .card:nth-child(5), #discardArea .card:nth-child(5){ z-index: 48; left: 40px; }
+#deckArea .card:nth-child(6), #discardArea .card:nth-child(6){ z-index: 47; left: 50px; }
+#deckArea .card:nth-child(7), #discardArea .card:nth-child(7){ z-index: 46; left: 60px; }
+#deckArea .card:nth-child(8), #discardArea .card:nth-child(8){ z-index: 45; left: 70px; }
+#deckArea .card:nth-child(9), #discardArea .card:nth-child(9){ z-index: 44; left: 80px; }
+#deckArea .card:nth-child(10), #discardArea .card:nth-child(10){ z-index: 43; left: 90px; }
+#deckArea .card:nth-child(11), #discardArea .card:nth-child(11){ z-index: 42; left: 100px; }
+#deckArea .card:nth-child(12), #discardArea .card:nth-child(12){ z-index: 41; left: 110px; }
+#deckArea .card:nth-child(13), #discardArea .card:nth-child(13){ z-index: 40; left: 120px; }
+#deckArea .card:nth-child(14), #discardArea .card:nth-child(14){ z-index: 39; left: 130px; }
+#deckArea .card:nth-child(15), #discardArea .card:nth-child(15){ z-index: 38; left: 140px; }
+#deckArea .card:nth-child(16), #discardArea .card:nth-child(16){ z-index: 37; left: 150px; }
+#deckArea .card:nth-child(17), #discardArea .card:nth-child(17){ z-index: 36; left: 160px; }
+#deckArea .card:nth-child(18), #discardArea .card:nth-child(18){ z-index: 35; left: 170px; }
+#deckArea .card:nth-child(19), #discardArea .card:nth-child(19){ z-index: 34; left: 180px; }
+#deckArea .card:nth-child(20), #discardArea .card:nth-child(20){ z-index: 33; left: 190px; }
+#deckArea .card:nth-child(21), #discardArea .card:nth-child(21){ z-index: 32; left: 200px; }
+#deckArea .card:nth-child(22), #discardArea .card:nth-child(22){ z-index: 31; left: 210px; }
+#deckArea .card:nth-child(23), #discardArea .card:nth-child(23){ z-index: 30; left: 220px; }
+#deckArea .card:nth-child(24), #discardArea .card:nth-child(24){ z-index: 29; left: 230px; }
+#deckArea .card:nth-child(25), #discardArea .card:nth-child(25){ z-index: 28; left: 240px; }
+#deckArea .card:nth-child(26), #discardArea .card:nth-child(26){ z-index: 27; left: 250px; }
+#deckArea .card:nth-child(27), #discardArea .card:nth-child(27){ z-index: 26; left: 260px; }
+#deckArea .card:nth-child(28), #discardArea .card:nth-child(28){ z-index: 25; left: 270px; }
+#deckArea .card:nth-child(29), #discardArea .card:nth-child(29){ z-index: 24; left: 280px; }
+#deckArea .card:nth-child(30), #discardArea .card:nth-child(30){ z-index: 23; left: 290px; }
+#deckArea .card:nth-child(31), #discardArea .card:nth-child(31){ z-index: 22; left: 300px; }
+#deckArea .card:nth-child(32), #discardArea .card:nth-child(32){ z-index: 21; left: 310px; }
+#deckArea .card:nth-child(33), #discardArea .card:nth-child(33){ z-index: 20; left: 320px; }
+#deckArea .card:nth-child(34), #discardArea .card:nth-child(34){ z-index: 19; left: 330px; }
+#deckArea .card:nth-child(35), #discardArea .card:nth-child(35){ z-index: 18; left: 340px; }
+#deckArea .card:nth-child(36), #discardArea .card:nth-child(36){ z-index: 17; left: 350px; }
+#deckArea .card:nth-child(37), #discardArea .card:nth-child(37){ z-index: 16; left: 360px; }
+#deckArea .card:nth-child(38), #discardArea .card:nth-child(38){ z-index: 15; left: 370px; }
+#deckArea .card:nth-child(39), #discardArea .card:nth-child(39){ z-index: 14; left: 380px; }
+#deckArea .card:nth-child(40), #discardArea .card:nth-child(40){ z-index: 13; left: 390px; }
+#deckArea .card:nth-child(41), #discardArea .card:nth-child(41){ z-index: 12; left: 400px; }
+#deckArea .card:nth-child(42), #discardArea .card:nth-child(42){ z-index: 11; left: 410px; }
+#deckArea .card:nth-child(43), #discardArea .card:nth-child(43){ z-index: 10; left: 420px; }
+#deckArea .card:nth-child(44), #discardArea .card:nth-child(44){ z-index: 9; left: 430px; }
+#deckArea .card:nth-child(45), #discardArea .card:nth-child(45){ z-index: 8; left: 440px; }
+#deckArea .card:nth-child(46), #discardArea .card:nth-child(46){ z-index: 7; left: 450px; }
+#deckArea .card:nth-child(47), #discardArea .card:nth-child(47){ z-index: 6; left: 460px; }
+#deckArea .card:nth-child(48), #discardArea .card:nth-child(48){ z-index: 5; left: 470px; }
+#deckArea .card:nth-child(49), #discardArea .card:nth-child(49){ z-index: 4; left: 480px; }
+#deckArea .card:nth-child(50), #discardArea .card:nth-child(50){ z-index: 3; left: 490px; }
+#deckArea .card:nth-child(51), #discardArea .card:nth-child(51){ z-index: 2; left: 500px; }
+#deckArea .card:nth-child(52), #discardArea .card:nth-child(52){ z-index: 1; left: 510px; }
+
+
+footer{ position: absolute; bottom: 10px; right: 10px; color: #555; }

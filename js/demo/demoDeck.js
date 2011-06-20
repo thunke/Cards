@@ -3,17 +3,7 @@ var demoDeck = (function(){
 	var $deckArea = null,
 	 	$discardArea = null,
 		deckFacing = "up",
-		d = null,
-
-		setZ = function(){
-			var left = 0,
-				total = d.count();
-			
-			$.each($('#deckArea').find("card"), function(){
-				console.log("hai");
-			});
-		};
-
+		d = null;
 
 
 	$(document).ready(function(){
@@ -86,7 +76,7 @@ var demoDeck = (function(){
 			.append($('<div />').addClass('button_row')
 			.append(
 				$('<input />').attr({ type: 'button', value: 'Hit Me', id: 'hands-' + i + '-hit' })
-				.click(function(){ d.dealCard(i, "up", false) })
+				.click(function(){ d.dealCard(i, "up", true) })
 			)
 			.append(
 				$('<input />').attr({type: 'button', value: 'Discard Selected', id: 'hands-'+ i +'-discard'})  //, disabled: 'true'

@@ -5,9 +5,9 @@ var demoDeck = (function(){
 		deckFacing = "up",
 		d = null;
 
-
 	$(document).ready(function(){
 
+		//Initializing the Game
 		$deckArea = $('#deckArea'),
 		$discardArea = $('#discardArea'),
 		deckFacing = "up"
@@ -16,7 +16,7 @@ var demoDeck = (function(){
 		d.createHand(5);
 		$deckArea.append(d.renderDeck());
 		$('#handsArea').append(d.renderHands());
-	
+
 		//Button Handlers for the Deck
 		$('#shuffle').click(function(){
 			d.shuffle(6);
@@ -75,11 +75,11 @@ var demoDeck = (function(){
 			this.$ui
 			.append($('<div />').addClass('button_row')
 			.append(
-				$('<input />').attr({ type: 'button', value: 'Hit Me', id: 'hands-' + i + '-hit' })
+				$('<input />').attr({ type: 'button', 'class': 'button', value: 'Hit Me', id: 'hands-' + i + '-hit' })
 				.click(function(){ d.dealCard(i, "up", true) })
 			)
 			.append(
-				$('<input />').attr({type: 'button', value: 'Discard Selected', id: 'hands-'+ i +'-discard'})  //, disabled: 'true'
+				$('<input />').attr({type: 'button', 'class': 'button', value: 'Discard Selected', id: 'hands-'+ i +'-discard'})  //, disabled: 'true'
 				.click(function(){
 
 					for(j = d.hands[i].cards.length - 1; j >= 0; j--)
@@ -97,10 +97,12 @@ var demoDeck = (function(){
 				})
 			)
 			.append(
-				$('<input />').attr({type: 'button', value: 'toString', id: 'hands-'+i+'-toString'})
+				$('<input />').attr({type: 'button', 'class': 'button', value: 'toString', id: 'hands-'+i+'-toString'})
 				.click(function(){ alert( d.hands[i].toString() ); }))
 			);
+			
+			
 		});	
-	});
-	
+	});	
+
 }());

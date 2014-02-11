@@ -19,7 +19,7 @@ var demoDeck = (function(){
 
 		//Button Handlers for the Deck
 		$('#shuffle').click(function(){
-			d.shuffle(6);
+			d.shuffle(1);
 			$('#cards').remove();
 			$deckArea.append(d.renderDeck());
 		});
